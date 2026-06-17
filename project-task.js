@@ -47,27 +47,33 @@ but it contains multiple syntax errors that prevent it from being parsed.
 const invalidBookingJSON = `
 {
   "hotelName": "Grand City Hotel",
-  "checkInDate": "2024-05-15"
+  "checkInDate": "2024-05-15",
   "checkOutDate": "2024-05-20",
   "guests": [
     {
-      name: "Alice Johnson",
+      "name": "Alice Johnson",
       "age": 30,
       "email": "alice.johnson@example.com"
     },
     {
       "name": "Bob Smith",
-      "age": undefined,
+      "age": null,
       "email": "bob.smith@example"
     }
   ],
   "roomDetails": {
     "type": "Suite",
     "pricePerNight": 200,
-    "amenities": ["WiFi", "Breakfast", "Parking",]
+    "amenities": ["WiFi", "Breakfast", "Parking"] 
   }
 }
 `;
+//added comma on line 50
+//added quotation marks around name key on line 54
+// changed undefined to null on line 60
+//deleted extra comma on line 67
+//jsonlint suggested removing backticks, but I am keeping them in there because 
+//after doing some research it seems like a valid way to create JSON like objects in a .js file
 
 
 // ============================================
